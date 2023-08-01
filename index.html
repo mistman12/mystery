@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Love+Light&family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,400&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="textBlock">
+            <p>女朋友日快樂 OJ</p>
+        </div>
+        <button id="translateBtn">Click if you can't read :P</button>
+    </div>
+    <script>
+        const translations = [
+            "女朋友日快樂 OJ", // Chinese
+            "Feliz Dia da Namorada OJ", // Portuguese
+            "Happy Girlfriend Day OJ" // English
+        ];
+
+        const textBlock = document.getElementById('textBlock');
+        const translateBtn = document.getElementById('translateBtn');
+        let currentLanguageIndex = 0; // Default language is Chinese
+
+        function applyStyles(fontFamily, fontSize) {
+            textBlock.style.fontFamily = fontFamily;
+            textBlock.style.fontSize = fontSize;
+        }
+
+        function translateText() {
+            currentLanguageIndex = (currentLanguageIndex + 1) % translations.length;
+            textBlock.textContent = translations[currentLanguageIndex];
+
+            if (currentLanguageIndex === 0) {
+                applyStyles("'Love Light', cursive", "10vw"); // Apply 'Love Light' font and 5em font size only to the text inside #textBlock
+                translateBtn.textContent = "click me if u cant read :P";
+            } else if (currentLanguageIndex === 1) {
+                applyStyles("'Love Light', cursive", "10vw"); // Reset font family and font size for normal browser font for the text inside #textBlock
+                translateBtn.textContent = "try again stinky ";
+            } else if (currentLanguageIndex === 2) {
+                applyStyles("'Love Light', cursive", "10vw"); // Apply 'Love Light' font and 5em font size only to the text inside #textBlock
+                translateBtn.textContent = "back to the mainland";
+            }
+        }
+
+        document.getElementById('translateBtn').addEventListener('click', translateText);
+    </script>
+    <img src="a6fd3d5224c5d67a5534d55f4f93e877.gif" alt="">
+</body>
+
+</html>

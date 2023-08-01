@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('pngtree-pink-micro-dimensional-paper-cut-wind-chinese-valentines-day-love-background-picture-image_977666.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+img{
+    margin-top: 5%;
+    height: 50%;
+    max-width: 540px;
+}
+
+.container {
+    margin-top: 50px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textBlock {
+    width: 70%;
+}
+
+p {
+    font-size: 10vw;
+    font-family: 'Love Light'
+    
+}
+
+
+#translateBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  #translateBtn:hover {
+    background-color: #ff1493; /* Pink background color */
+    transform: scale(1.2); /* Scale the button to 1.2 times its size */
+  }
